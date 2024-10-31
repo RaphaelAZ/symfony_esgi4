@@ -9,11 +9,15 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Liste des articles</h1>
+    <h1>Liste des produits</h1>
         <ul>
             {% for product in products %}
                 <li>
                     <p>{{ product.description }} → {{ product.amount }}</p>
+                </li>
+            {% else %}
+                <li>
+                    <p>Aucun produit disponible.</p>
                 </li>
             {% endfor %}
         </ul>
